@@ -2,6 +2,11 @@
 
 Standalong project - 1st project
 
+
+![](https://raw.githubusercontent.com/ureshaL/Go-Sri-Lanka-Cab_Service/master/ezgif.com-video-to-gif%20(1).gif)
+
+
+
 	Proposed IT solution for Go Sri Lanka Cab Service is a standalone single user application.
 	The whole system is handled by the manager of the company. Manager can input login credentials and enter the system.
 
@@ -28,4 +33,4 @@ Standalong project - 1st project
 	
 	
 	
-	![Go-Sri-Lanka-Cab_Service](https://raw.githubusercontent.com/ureshaL/Go-Sri-Lanka-Cab_Service/master/ezgif.com-video-to-gif%20(1).gif)
+	
