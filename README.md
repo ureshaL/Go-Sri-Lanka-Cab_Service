@@ -24,3 +24,6 @@ Standalong project - 1st project
 	they will be notified automatically by the system and there is no need to remember them by the manager manually.
 
 	And also, manager can view available vehicles, view customer details, view monthly income and profit.
+	
+	
+	![](name-of-giphy.gif)
