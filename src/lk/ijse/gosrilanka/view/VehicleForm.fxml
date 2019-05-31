@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1037.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gosrilanka.controller.VehicleFormController">
+   <children>
+      <JFXTabPane layoutX="134.0" layoutY="140.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Vehicle">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtVehicleSearch" layoutX="22.0" layoutY="26.0" prefHeight="31.0" prefWidth="322.0" promptText="Search...">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="21.0" fitWidth="26.0" layoutX="316.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/search-magnifier-interface-symbol.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane alignment="CENTER_RIGHT" hgap="10.0" layoutX="304.0" layoutY="24.0" prefHeight="36.0" prefWidth="296.0" AnchorPane.rightAnchor="20.0">
+                           <children>
+                              <JFXButton fx:id="btnVehicleAdd" graphicTextGap="8.0" styleClass="btn-green" stylesheets="@style/style.css" text="Add Vehicle" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnVehicleEdit" graphicTextGap="8.0" styleClass="btn-yellow" stylesheets="@style/style.css" text="Edit Vehicle" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </FlowPane>
+                        <TableView fx:id="tblVehicle" layoutX="31.0" layoutY="133.0" prefHeight="330.0" prefWidth="704.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Vehicle No." />
+                            <TableColumn prefWidth="75.0" text="Ownership Type" />
+                              <TableColumn prefWidth="75.0" text="Owner NIC" />
+                              <TableColumn prefWidth="75.0" text="Owner Name" />
+                              <TableColumn prefWidth="75.0" text="Category" />
+                              <TableColumn prefWidth="75.0" text="Make" />
+                              <TableColumn prefWidth="75.0" text="Model" />
+                              <TableColumn prefWidth="75.0" text="Registered Date" />
+                              <TableColumn prefWidth="75.0" text="Insurance Date" />
+                              <TableColumn prefWidth="75.0" text="Revenue Date" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Vehicle Make">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtMakeSearch" layoutX="22.0" layoutY="26.0" prefHeight="31.0" prefWidth="322.0" promptText="Search...">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="21.0" fitWidth="26.0" layoutX="316.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/search-magnifier-interface-symbol.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane alignment="CENTER_RIGHT" hgap="10.0" layoutX="659.0" layoutY="21.0" prefHeight="41.0" prefWidth="358.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="21.0">
+                           <children>
+                              <JFXButton fx:id="btnMakeAdd" graphicTextGap="8.0" styleClass="btn-green" stylesheets="@style/style.css" text="Add Vehicle Make" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnMakeEdit" graphicTextGap="8.0" styleClass="btn-yellow" stylesheets="@style/style.css" text="Edit Vehicle Make" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </FlowPane>
+                        <TableView fx:id="tblMake" prefHeight="330.0" prefWidth="704.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Make ID" />
+                              <TableColumn prefWidth="75.0" text="Make Name" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Vehicle Model">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtModelSearch" layoutX="22.0" layoutY="26.0" prefHeight="31.0" prefWidth="322.0" promptText="Search...">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="21.0" fitWidth="26.0" layoutX="316.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/search-magnifier-interface-symbol.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane alignment="CENTER_RIGHT" hgap="10.0" layoutX="653.0" layoutY="21.0" prefHeight="39.0" prefWidth="370.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="21.0">
+                           <children>
+                              <JFXButton fx:id="btnModelAdd" graphicTextGap="8.0" styleClass="btn-green" stylesheets="@style/style.css" text="Add Vehicle Model" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnModelEdit" graphicTextGap="8.0" styleClass="btn-yellow" stylesheets="@style/style.css" text="Edit Vehicle Model" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </FlowPane>
+                        <TableView fx:id="tblModel" prefHeight="330.0" prefWidth="704.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Model ID" />
+                              <TableColumn prefWidth="75.0" text="Model Name" />
+                              <TableColumn prefWidth="75.0" text="No. Of Seats" />
+                              <TableColumn prefWidth="75.0" text="Price Per Km" />
+                              <TableColumn prefWidth="75.0" text="Deposite Ammount" />
+                              <TableColumn prefWidth="75.0" text="Catgory Name" />
+                              <TableColumn prefWidth="75.0" text="Make Name" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Vehicle Categary">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtCategarySearch" layoutX="22.0" layoutY="26.0" prefHeight="31.0" prefWidth="322.0" promptText="Search...">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="21.0" fitWidth="26.0" layoutX="316.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/search-magnifier-interface-symbol.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane alignment="CENTER_RIGHT" hgap="10.0" layoutX="612.0" layoutY="21.0" prefHeight="40.0" prefWidth="405.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="21.0">
+                           <children>
+                              <JFXButton fx:id="btnCategaryAdd" graphicTextGap="8.0" styleClass="btn-green" stylesheets="@style/style.css" text="Add Vehicle Categary" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnCategaryEdit" graphicTextGap="8.0" styleClass="btn-yellow" stylesheets="@style/style.css" text="Edit Vehicle Categary" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </FlowPane>
+                        <TableView fx:id="tblCategary" prefHeight="330.0" prefWidth="704.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Categary ID" />
+                              <TableColumn prefWidth="75.0" text="Categary Name" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Vehicle Owner">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtVehicleOwnerSearch" layoutX="22.0" layoutY="26.0" prefHeight="31.0" prefWidth="322.0" promptText="Search...">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="21.0" fitWidth="26.0" layoutX="316.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/search-magnifier-interface-symbol.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane alignment="CENTER_RIGHT" hgap="10.0" layoutX="612.0" layoutY="21.0" prefHeight="40.0" prefWidth="374.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="21.0">
+                           <children>
+                              <JFXButton fx:id="btnVehicleOwnerAdd" graphicTextGap="8.0" styleClass="btn-green" stylesheets="@style/style.css" text="Add Vehicle Owner" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnVehicleOwnerEdit" graphicTextGap="8.0" styleClass="btn-yellow" stylesheets="@style/style.css" text="Edit Vehicle Owner" textFill="#f8f5f5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </FlowPane>
+                        <TableView fx:id="tblVehicleOwner" prefHeight="330.0" prefWidth="704.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Owner NIC" />
+                              <TableColumn prefWidth="75.0" text="Name" />
+                              <TableColumn prefWidth="75.0" text="Address" />
+                              <TableColumn prefWidth="75.0" text="Mobile" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

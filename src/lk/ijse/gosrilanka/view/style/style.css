@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 17, 2019, 11:54:39 AM
+    Author     : Uresha Lakshani
+*/
+
+.btn-blue{
+    -fx-background-color: #673ab7;
+}
+
+.btn-blue:hover{
+    -fx-background-color: #512da8;
+}
+
+.btn-dashboard{
+    -fx-background-color: #cfd8dc;
+}
+
+.btn-dashboard:hover{
+    -fx-background-color: #ffe082;
+}
+
+.btn-yellow{
+    -fx-background-color: #ffd600;
+}
+
+.btn-yellow:hover{
+    -fx-background-color: #ffea00;
+}
+
+.btn-green{
+    -fx-background-color: #8bc34a;
+}
+
+.btn-green:hover{
+    -fx-background-color: #9ccc65;
+}
+
+.btn-red{
+    -fx-background-color: #e53935;
+}
+
+.btn-red:hover{
+    -fx-background-color: #f44336;
+}

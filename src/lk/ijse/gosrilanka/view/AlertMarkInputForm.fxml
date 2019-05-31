@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gosrilanka.controller.AlertMarkInputFormController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="44.0" prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: #7e57c2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="24.0" text="Enter New Date" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="78.0" layoutY="81.0" prefHeight="299.0" prefWidth="560.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="81.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label layoutY="5.0" text="New Date">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dcNewDate" layoutX="84.0" prefHeight="32.0" prefWidth="346.0" promptText="Select New Date" style="-fx-font-size: 15px;" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="51.0">
+               <children>
+                  <JFXButton fx:id="btnUpdateValue" layoutX="213.0" layoutY="-1.0" prefHeight="31.0" prefWidth="130.0" styleClass="btn-red" stylesheets="@style/style.css" text="Update Value" textFill="WHITE" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

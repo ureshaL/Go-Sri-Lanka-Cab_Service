@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gosrilanka.controller.ReportFormController">
+   <children>
+      <VBox layoutX="82.0" layoutY="67.0" prefHeight="173.0" prefWidth="897.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <AnchorPane prefHeight="101.0" prefWidth="827.0" style="-fx-border-color: #cfd8dc; -fx-border-width: 2px;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Driver Report" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnDriver" layoutX="562.0" layoutY="51.0" prefHeight="31.0" prefWidth="121.0" styleClass="btn-yellow" stylesheets="@style/style.css" text="Show Report" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <DatePicker fx:id="driverEdate" editable="false" layoutX="358.0" layoutY="33.0" prefHeight="38.0" prefWidth="278.0" promptText="End Date" style="-fx-font-size: 17px;" AnchorPane.bottomAnchor="14.0" />
+                  <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="312.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/right-arrow%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <DatePicker fx:id="driverSdate" editable="false" layoutX="14.0" layoutY="47.0" prefHeight="38.0" prefWidth="278.0" promptText="Start Date" style="-fx-font-size: 17px;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="101.0" prefWidth="827.0" style="-fx-border-color: #cfd8dc; -fx-border-width: 2px;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Customer Report" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnCustomer" layoutX="562.0" layoutY="51.0" prefHeight="31.0" prefWidth="121.0" styleClass="btn-yellow" stylesheets="@style/style.css" text="Show Report" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <DatePicker fx:id="customerEdate" editable="false" layoutX="358.0" layoutY="33.0" prefHeight="38.0" prefWidth="278.0" promptText="End Date" style="-fx-font-size: 17px;" AnchorPane.bottomAnchor="14.0" />
+                  <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="311.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/right-arrow%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <DatePicker fx:id="customerSdate" editable="false" layoutX="14.0" layoutY="47.0" prefHeight="38.0" prefWidth="278.0" promptText="Start Date" style="-fx-font-size: 17px;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="121.0" prefHeight="101.0" prefWidth="827.0" style="-fx-border-color: #cfd8dc; -fx-border-width: 2px;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Rent Order Report" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnRent" layoutX="562.0" layoutY="51.0" prefHeight="31.0" prefWidth="121.0" styleClass="btn-yellow" stylesheets="@style/style.css" text="Show Report" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <DatePicker fx:id="rentEdate" editable="false" layoutX="358.0" layoutY="33.0" prefHeight="38.0" prefWidth="278.0" promptText="End Date" style="-fx-font-size: 17px;" AnchorPane.bottomAnchor="14.0" />
+                  <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="312.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/right-arrow%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <DatePicker fx:id="rentSdate" editable="false" layoutX="14.0" layoutY="47.0" prefHeight="38.0" prefWidth="278.0" promptText="Start Date" style="-fx-font-size: 17px;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

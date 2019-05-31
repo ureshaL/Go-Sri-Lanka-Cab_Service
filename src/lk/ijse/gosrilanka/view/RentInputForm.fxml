@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gosrilanka.controller.RentInputFormController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="44.0" prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: #7e57c2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lblTitle" alignment="CENTER" layoutX="20.0" layoutY="24.0" text="Rent" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="78.0" layoutY="81.0" prefHeight="582.0" prefWidth="430.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="81.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <Label layoutY="5.0" text="Order ID">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtOrderId" editable="false" layoutX="86.0" AnchorPane.leftAnchor="130.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label layoutY="5.0" text="Driver">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbDriver" layoutX="99.0" layoutY="-1.0" prefWidth="150.0" promptText="Select Driver" style="-fx-font-size: 15px;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="91.0">
+               <children>
+                  <Label layoutY="5.0" text="Journey Date">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dcJourneyDate" editable="false" layoutX="116.0" layoutY="1.0" prefHeight="31.0" prefWidth="183.0" promptText="Select Journey Date" style="-fx-font-size: 15px;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="117.0" />
+                  <TextField fx:id="txtNoOfDays" layoutY="1.0" prefHeight="31.0" prefWidth="58.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="334.0" layoutY="8.0" text="Days" AnchorPane.rightAnchor="64.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label layoutY="5.0" text="Category">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbCategory" layoutX="99.0" layoutY="-1.0" prefWidth="150.0" promptText="Select Vehicle category" style="-fx-font-size: 15px;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="51.0">
+               <children>
+                  <Label layoutY="5.0" text="Make">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbMake" disable="true" layoutX="99.0" layoutY="-1.0" prefWidth="150.0" promptText="Select vehicle make" style="-fx-font-size: 15px;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="175.0">
+               <children>
+                  <Label layoutY="5.0" text="Model">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbModel" disable="true" layoutX="99.0" layoutY="-1.0" prefWidth="150.0" promptText="Select vehicle model" style="-fx-font-size: 15px;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label layoutY="5.0" text="Vehicle No">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbVehicle" disable="true" layoutX="99.0" layoutY="-1.0" prefWidth="150.0" promptText="Select Vehicle No" style="-fx-font-size: 15px;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <AnchorPane layoutX="10.0" layoutY="253.0">
+               <children>
+                  <Label layoutY="5.0" text="Customer NIC">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCustomerNic" layoutX="101.0" prefHeight="31.0" prefWidth="219.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="91.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton fx:id="btnCustomerCheck" prefHeight="31.0" prefWidth="84.0" styleClass="btn-yellow" stylesheets="@style/style.css" text="Check" textFill="WHITE" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/refresh%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="473.0">
+               <children>
+                  <Label layoutY="5.0" text="Customer Licence">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCustomerLicenceNo" disable="true" layoutX="101.0" prefHeight="31.0" prefWidth="329.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="212.0">
+               <children>
+                  <Label layoutY="5.0" text="Customer Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCustomerName" disable="true" layoutX="101.0" prefHeight="31.0" prefWidth="329.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="336.0" prefHeight="75.0" prefWidth="430.0">
+               <children>
+                  <Label layoutY="5.0" text="Customer Address">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtCustomerAddress" disable="true" layoutX="120.0" prefHeight="75.0" prefWidth="310.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="417.0">
+               <children>
+                  <Label layoutY="5.0" text="Customer Mobile">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCustomerMobile" disable="true" layoutX="101.0" prefHeight="31.0" prefWidth="329.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="51.0">
+               <children>
+                  <JFXButton fx:id="btnSave" layoutX="155.0" layoutY="-1.0" prefHeight="31.0" prefWidth="105.0" styleClass="btn-green" stylesheets="@style/style.css" text="Save" textFill="WHITE" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDelete" layoutX="213.0" layoutY="-1.0" prefHeight="31.0" prefWidth="105.0" styleClass="btn-red" stylesheets="@style/style.css" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Separator layoutX="488.0" layoutY="56.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="475.0" AnchorPane.topAnchor="81.0" />
+      <VBox layoutX="522.0" layoutY="214.0" prefHeight="26.0" prefWidth="300.0" spacing="20.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="KM Per Day">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtKmPerDay" alignment="CENTER_RIGHT" editable="false" layoutX="124.0" layoutY="-5.0" prefHeight="25.0" prefWidth="183.0" style="-fx-text-fill: blue;" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Price Per KM">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPricePerKm" alignment="CENTER_RIGHT" editable="false" layoutX="124.0" layoutY="-5.0" prefHeight="25.0" prefWidth="183.0" style="-fx-text-fill: blue;" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="43.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="139.0" text="Deposit Amount">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDepositAmount" alignment="CENTER_RIGHT" editable="false" layoutX="124.0" layoutY="-5.0" prefHeight="25.0" prefWidth="183.0" style="-fx-text-fill: blue;" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="76.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="175.0" text="Driver Price Per Day">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDriverPricePerDay" alignment="CENTER_RIGHT" editable="false" layoutX="124.0" layoutY="-5.0" prefHeight="25.0" prefWidth="183.0" style="-fx-text-fill: blue;" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Min Amount">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtMinAmount" alignment="CENTER_RIGHT" editable="false" layoutX="124.0" layoutY="-5.0" prefHeight="25.0" prefWidth="183.0" style="-fx-text-fill: blue;" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2019-05-03T22:19:50 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="driver_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7bfadf90-4496-4c47-aea5-d3a645266a96">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="My_Data_Adaptor"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="181"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="812"/>
+	<parameter name="startDate" class="java.lang.String"/>
+	<parameter name="endDate" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+order_id,
+vehicle_no, 
+order_date, 
+journey_date, 
+return_date, 
+no_of_days as booked_days, 
+DATEDIFF(return_date,journey_date) as spent_days, 
+(DATEDIFF(return_date,journey_date) - no_of_days) as over_days, 
+km_spent,
+C.name, 
+driver_name,
+CASE 
+	WHEN km_spent < (DATEDIFF(return_date,journey_date)*km_per_day) THEN (DATEDIFF(return_date,journey_date)*km_per_day*price_per_km) + (driver_price_per_day*DATEDIFF(return_date,journey_date)) + (driver_price_per_day*DATEDIFF(return_date,journey_date))
+    ELSE (km_spent*price_per_km) + (driver_price_per_day*DATEDIFF(return_date,journey_date))
+END AS amount
+FROM Cus_Order CO
+LEFT JOIN Customer C ON CO.customer_nic=C.customer_nic
+LEFT JOIN Driver D ON CO.licence_no=D.licence_no
+WHERE DATE(order_date) BETWEEN  $P{startDate}  AND  $P{endDate} 
+ORDER BY order_id DESC]]>
+	</queryString>
+	<field name="order_id" class="java.lang.Integer"/>
+	<field name="vehicle_no" class="java.lang.String"/>
+	<field name="order_date" class="java.lang.String"/>
+	<field name="journey_date" class="java.lang.String"/>
+	<field name="return_date" class="java.lang.String"/>
+	<field name="booked_days" class="java.lang.Integer"/>
+	<field name="spent_days" class="java.lang.Integer"/>
+	<field name="over_days" class="java.lang.Long"/>
+	<field name="km_spent" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="driver_name" class="java.lang.String"/>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="7" width="520" height="30" uuid="5de8cdad-2b16-4d26-93bb-6b9dfc2bfdea"/>
+				<textElement textAlignment="Center">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Go Sri Lanka - Rent Order Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="72" y="53" width="100" height="13" uuid="82504b21-d9f7-4bee-999e-83a03ffe076d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="53" width="60" height="13" uuid="688aae3a-d1e5-4e26-b1c7-3ae634453841"/>
+				<text><![CDATA[Report Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="53" width="30" height="13" uuid="8ce4df7f-1434-450f-bd0c-256819824a5a"/>
+				<text><![CDATA[From :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="53" width="70" height="13" uuid="6fa8fe44-1e5b-4a7d-9e07-8f9f1ad15c22"/>
+				<textFieldExpression><![CDATA[$P{startDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="53" width="70" height="13" uuid="0b176b88-4010-48b7-9448-39f2790b5974"/>
+				<textFieldExpression><![CDATA[$P{endDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="455" y="53" width="20" height="13" uuid="f1281e09-a593-4476-80a3-f7cf4e0599a0"/>
+				<text><![CDATA[To :]]></text>
+			</staticText>
+			<image>
+				<reportElement x="86" y="7" width="50" height="30" uuid="6d29565c-5f71-4afb-8fe0-317ef31431cd"/>
+				<imageExpression><![CDATA["E:/Projects/go-sri-lanka/src/lk/ijse/gosrilanka/assest/Logo.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="44" width="555" height="2" forecolor="#F2F0F0" uuid="b7771a4b-dc28-4606-b244-be9d7294c8c2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="8" y="9" width="22" height="15" uuid="b474c211-b07d-4b1d-9580-fdfdd6617511"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="9" width="70" height="15" uuid="3bc2d7c5-849a-4806-93ad-a46c414caa09"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Order Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="9" width="38" height="15" uuid="adeece17-105b-4448-8f78-91ce1332b5b1"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[J/D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="9" width="22" height="15" uuid="fad39de2-1d9f-4385-9342-218ace0da113"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[B/D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="9" width="29" height="15" uuid="61ef8672-4b6e-46f3-8f67-5ac14a817a95"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[S/D]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" forecolor="#DEDCDC" uuid="662c6a11-4ce8-4129-bc7a-6d164e7c6aff"/>
+			</line>
+			<line>
+				<reportElement x="0" y="27" width="555" height="1" forecolor="#DEDCDC" uuid="de43c0b6-dfe8-4f92-a337-a3fbd8d29a9a"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="0" width="1" height="28" forecolor="#DEDCDC" uuid="cd539437-f849-4383-a9c1-18fcf192393f"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="28" forecolor="#DEDCDC" uuid="72c36eb5-767f-449d-b13e-c1ed9db6197a"/>
+			</line>
+			<staticText>
+				<reportElement x="30" y="9" width="56" height="15" uuid="7981440c-5207-465b-a6d7-e875c05e7eb1"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vehicle No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="9" width="29" height="15" uuid="9105a17a-7ef7-4e93-a957-40d8439121eb"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[O/D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="9" width="29" height="15" uuid="e6f48a32-700e-4bd0-8c32-203415882c1b"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[KM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="9" width="81" height="15" uuid="32080e8a-c21f-4c2b-abf3-812944e426f6"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Driver]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="9" width="74" height="15" uuid="5b410464-c244-44ff-b2a1-87ce659c2a83"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="508" y="9" width="41" height="15" uuid="24c210ed-b84d-4d86-96ac-6c5ed24896ca"/>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="9" width="46" height="15" uuid="3cee9799-bad7-494c-ab81-620709677879"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[R/D]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="8" y="4" width="22" height="13" uuid="afeed0bc-2a0e-406b-bb1d-ff8ce3430d7e"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="4" width="70" height="13" uuid="a1d3a5d8-a814-4c62-9003-90f5fbda1dad"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="4" width="38" height="13" uuid="c2f8fe10-dc87-4d98-9a67-ee0784a03f8c"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{journey_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="4" width="22" height="13" uuid="079970cc-7e88-4ce8-851a-fac8db5626a6"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booked_days}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="262" y="4" width="28" height="13" uuid="e568d276-339a-4897-a168-816d12315eaf"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spent_days}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="4" width="56" height="13" uuid="9289c86e-1265-435f-a9f6-b4215a58d91b"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vehicle_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="4" width="28" height="13" uuid="4558805e-3cc9-4d87-a0d2-7d7999923a08"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{over_days}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="4" width="28" height="13" uuid="a47d5798-f188-4d77-a68b-2de557b4441d"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{km_spent}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="349" y="4" width="81" height="13" uuid="e17ffa57-e4c0-4db2-89f1-d2f5f21f73d1"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{driver_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="4" width="73" height="13" uuid="54df1c40-06ef-4a7b-95b5-f14e807c55cd"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="4" width="40" height="13" uuid="f543f6e0-ed03-4b98-8726-543f1dcef851"/>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="4" width="46" height="13" uuid="0e7d8085-9fc3-419d-b618-90d8b462e34a"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{return_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="190" height="13" uuid="1920ba61-c9e4-4fec-b093-5a4039c7b352"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[This is computer generated report. No need to sign]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="13" width="334" height="13" uuid="36ea10b1-8bf2-47f4-9cbf-e5dc33459b61"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[J/D = Journey Date | R/D = Return Date | B/D = Booked Days | S/D = Spent Days | O/D = Over Spent Days | KM = KM Spent]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

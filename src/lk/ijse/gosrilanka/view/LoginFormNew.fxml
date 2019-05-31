@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="579.0" style="-fx-background-color: #eceff1;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gosrilanka.controller.LoginFormNewController">
+   <children>
+      <FlowPane alignment="TOP_CENTER" layoutX="79.0" prefHeight="230.0" prefWidth="635.0" style="-fx-background-color: #ffd54f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </FlowPane>
+      <FlowPane alignment="TOP_CENTER" layoutX="218.0" layoutY="189.0" prefHeight="299.0" prefWidth="635.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="271.0" prefWidth="381.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 20, 0, 0, 0);;">
+               <children>
+                  <AnchorPane layoutX="43.0" layoutY="35.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="35.0">
+                     <children>
+                        <JFXTextField fx:id="txtUsername" focusColor="#ffd54f" prefHeight="38.0" prefWidth="290.0" promptText="Username" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="txtPassword" focusColor="#ffd54f" layoutX="54.0" layoutY="63.0" promptText="Password" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXButton fx:id="btnSignIn" layoutY="137.0" prefHeight="49.0" prefWidth="311.0" style="-fx-background-color: #ffd54f; -fx-background-radius: 5px;" text="LOGIN" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="249.0" text="Developed by Uresha Lakshani @ IJSE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
