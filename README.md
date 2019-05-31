@@ -12,8 +12,10 @@ Standalong project - 1st project
 
 	Innitially, the manager can add vehicle makes and models to the system.
 	When registering a new vehicle to the system, manager can choose the vehicle make first,
-	then the system will suggest only relevent vehicle models only. Vehicle No is the unique identifier of vehicles in this system.
-	And also, when registering a new vehicle he can choose vehicle type such as "Own Vehicle", "Recruited Vehicle" or 
+	then the system will suggest only relevent vehicle models only. 
+	Vehicle No is the unique identifier of vehicles in this system.
+	And also, when registering a new vehicle he can choose vehicle type such as "Own Vehicle",
+	"Recruited Vehicle" or 
 	"Immediate Hired Vehicle". If registering vehicle type is a recruited vehicle or immediate hired vehicle,
 	a driver can also be registered and this is optional or drivers can be later registered in the system even without a vehicle.
 	
