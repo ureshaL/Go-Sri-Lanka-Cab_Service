@@ -3,7 +3,7 @@
 Standalong project - 1st project
 
 
-![](https://raw.githubusercontent.com/ureshaL/Go-Sri-Lanka-Cab_Service/master/ezgif.com-video-to-gif%20(1).gif)
+<img src="https://raw.githubusercontent.com/ureshaL/Go-Sri-Lanka-Cab_Service/master/ezgif.com-video-to-gif%20(1).gif" width="100%" />
 
 
 
