@@ -17,15 +17,16 @@ Standalong project - 1st project
 	And also, when registering a new vehicle he can choose vehicle type such as "Own Vehicle",
 	"Recruited Vehicle" or 
 	"Immediate Hired Vehicle". If registering vehicle type is a recruited vehicle or immediate hired vehicle,
-	a driver can also be registered and this is optional or drivers can be later registered in the system even without a vehicle.
+	a driver can also be registered and this is optional or drivers can be later registered in
+	the system even without a vehicle.
 	
 	Customers can either pre-order a car or order a car in this system.
 	When ordering the deposite amount and price per km will be automatically showen and assigned to that order. 
 	And also, if the order is a rent order, choosing a driver is optional in the sytem becouse, 
 	customers can borrow a vehicle even without a a driver. If the order is a hire order,
 	it is compulsory to choose a driver when ordering.
-	When any of theese order is purchased, availability checkout will be handled in background of the system and will be showen 
-	to the user.	
+	When any of theese order is purchased, availability checkout will be handled in background
+	of the system and will be showen to the user.	
 
 	When registered vehicles' insurance dates, revenue dates and service dates are near,
 	they will be notified automatically by the system and there is no need to remember them by the manager manually.
