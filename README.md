@@ -28,4 +28,4 @@ Standalong project - 1st project
 	
 	
 	
-	![](https://raw.githubusercontent.com/ureshaL/Go-Sri-Lanka-Cab_Service/master/ezgif.com-video-to-gif%20(1).gif)
+	![Go-Sri-Lanka-Cab_Service](ezgif.com-video-to-gif (1).gif)
