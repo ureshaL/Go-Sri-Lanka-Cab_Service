@@ -26,4 +26,6 @@ Standalong project - 1st project
 	And also, manager can view available vehicles, view customer details, view monthly income and profit.
 	
 	
-	![](name-of-giphy.gif)
+	
+	
+	![](https://raw.githubusercontent.com/ureshaL/Go-Sri-Lanka-Cab_Service/master/ezgif.com-video-to-gif%20(1).gif)
